@@ -1,0 +1,28 @@
+<div [ngClass]="myClass">
+  Div1
+</div>
+
+<button class="p-3 rounded-md" (click)="ToggleActivation()" [ngClass]="isActive == true ? 'bg-green-500': 'bg-red-500'">
+  {{ isActive ? 'Activo': 'Desativo'}}
+</button>
+
+<div class="flex">
+  <input type="number" [(ngModel)]="marks">
+</div>
+
+
+<div class="flex">
+  <p [ngClass]="marks > 50 ? 'text-green-500': 'text-red-500'">Marks: {{marks}} </p>
+</div>
+
+<div>
+  <input type="text" [(ngModel)]="backColor">
+</div>
+
+<div [ngStyle]="{'background-color': backColor}">
+  2
+</div>
+
+<div [ngStyle]="myCss">
+  Div 3
+</div>

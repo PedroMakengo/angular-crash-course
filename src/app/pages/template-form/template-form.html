@@ -1,0 +1,62 @@
+<div class="flex flex-col">
+  <form class="grid grid-col-12 gap-2" #formData="ngForm">
+    <div class="col-span-6 flex flex-col">
+      <label for="name">Name</label>
+      <input type="text" #name="ngModel" name="name" required minlength="5" [(ngModel)]="empObj.name"
+        placeholder="Enter name" class="border border-gray-200 py-2">
+      <div class="text-red-500">
+        @if(name.touched || name.dirty)
+        {
+        @if (name.errors?.['required']){
+        <span>This is required</span>
+        }
+        @else if(name.errors?.['minlength'])
+        {
+        <span>Min 5 characters needed</span>
+        }
+        }
+
+      </div>
+    </div>
+    <div class="col-span-6 flex flex-col">
+      <label for="role">Role</label>
+      <input type="text" name="role" required [(ngModel)]="empObj.role" placeholder="Enter role"
+        class="border border-gray-200 py-2">
+    </div>
+    <div class="col-span-6 flex flex-col">
+      <label for="departament">Department</label>
+      <select name="departament" required [(ngModel)]="empObj.department" class="border border-gray-200 py-2"
+        name="departament" id="departament">
+        <option selected>Select departament</option>
+        <option>HR</option>
+        <option>IT</option>
+        <option>Finance</option>
+        <option>Marketing</option>
+      </select>
+    </div>
+
+    <div class="col-span-6 flex flex-col">
+      <label for="status">Status</label>
+      <div class="flex gap-2">
+        <div class="flex items-center justify-center">
+          <input name="active" type="radio" placeholder="Enter role" class="border border-gray-200 py-2">
+          <label for="active">Active</label>
+        </div>
+        <div class="flex items-center justify-center">
+          <input name="isActive" type="radio" placeholder="Enter role" class="border border-gray-200 py-2">
+          <label for="isActive">isActive</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-span-12 flex flex-col">
+      <label for="salary">Salary</label>
+      <input name="salary" [(ngModel)]="empObj.salary" type="text" placeholder="Enter role"
+        class="border border-gray-200 py-2">
+    </div>
+
+    <div>
+      <button type="submit" [disabled]="" class="bg-blue-400 p-3">Save employee</button>
+    </div>
+  </form>
+</div>

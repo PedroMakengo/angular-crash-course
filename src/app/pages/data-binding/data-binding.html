@@ -1,0 +1,23 @@
+<div class="flex flex-col gap-2">
+  <p>data-binding works! {{ deptName }}</p>
+
+  <input type="text" [value]="deptName" />
+
+  <p [class]="className">Angular</p>
+
+  <input [type]="inputType" class="p-3 rounded-md outline-0 border border-amber-800" />
+
+  <button (click)="showMessage()">Show Message</button>
+
+  <select (change)="changeCity()">
+    <option value="Austin">Austin</option>
+    <option value="Denver">Denver</option>
+    <option value="Newyork">Newyork</option>
+  </select>
+
+  <input
+    type="text"
+    [(ngModel)]="deptName"
+    class="p-3 rounded-md outline-0 border border-amber-800"
+  />
+</div>

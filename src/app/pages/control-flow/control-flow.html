@@ -1,0 +1,67 @@
+<div class="flex flex-col gap-4">
+  <div class="flex items-center gap-2">
+    <input type="checkbox" id="checkbox" name="checkbox" [(ngModel)]="isShowText" />
+    <label for="checkbox">Show Textbox</label>
+  </div>
+
+  @if (isShowText == true) {
+  <div class="flex">
+    <input type="text" class="border border-gray-600 px-3 py-2 rounded-md" />
+  </div>
+  }
+</div>
+
+<div class="flex mt-2 border-t border-gray-400">
+  <button (click)="toggleLabelVisibility()">Toggle</button>
+</div>
+
+<div class="flex mt-2 border-t border-gray-400">
+  @if (showSuccessLabel() == true) {
+  <label for="label-success" class="text-green-500">Success</label>
+  } @else {
+  <label for="label-danger" class="text-red-500">Error</label>
+  }
+</div>
+
+<div class="flex mt-2 gap-2 flex-col">
+  <input type="number" [(ngModel)]="age" class="border border-gray-600 px-3 py-2 rounded-md" />
+</div>
+
+<div class="flex mt-2 gap-2 flex-col">
+  @if (age < 18) { <span>Child</span>
+    }
+    @else if (age > 18) {
+    <span>Old</span>
+    }
+    @else {
+    <span>Young</span>
+    }
+</div>
+
+<div class="mt-4 border-t">
+  <ul>
+    @for(course of courses; track $index){
+    <li>{{course}}</li>
+    }
+  </ul>
+</div>
+
+
+<div class="mt-4 border-t">
+  <table class="bg-amber-200 mt-2x">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(element of deptList; track $index){
+      <tr>
+        <td>{{element.id}}</td>
+        <td>{{element.name}}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

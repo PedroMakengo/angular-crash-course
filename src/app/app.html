@@ -1,0 +1,24 @@
+<main class="h-screen bg-gray-100">
+  <header class="bg-white border border-b border-gray-200 h-20 items-center">
+    <div class="flex justify-between max-w-5xl mx-auto h-full">
+      <div class="h-full flex items-center">
+        <h2>Angular Projeto</h2>
+      </div>
+      <nav class="flex items-center gap-6 h-full">
+        <a routerLink="template-form" class="text-gray-700 font-medium">Template Form</a>
+        <a routerLink="signals" class="text-gray-700 font-medium">Signals</a>
+        <a routerLink="template-form" class="text-gray-700 font-medium">Template form</a>
+        <a routerLink="attribute-directive" class="text-gray-700 font-medium">Attribute Directive</a>
+        <!-- <a routerLink="control-flow" class="text-gray-700 font-medium">Control</a> -->
+        <!-- <a routerLink="add-employee" class="text-gray-700 font-medium">Add Employee</a> -->
+        <!-- <a routerLink="employee-list" class="text-gray-700 font-medium">List Employee</a> -->
+        <!-- <a routerLink="data-binding" class="text-gray-700 font-medium">Data Binding</a> -->
+        <!-- <a routerLink="variables" class="text-gray-700 font-medium">Variables</a> -->
+      </nav>
+    </div>
+  </header>
+
+  <section class="mt-8 max-w-5xl mx-auto flex-1">
+    <router-outlet></router-outlet>
+  </section>
+</main>
