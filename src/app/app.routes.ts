@@ -13,6 +13,8 @@ import { Pipes } from './pages/pipes/pipes';
 import { SignalForms } from './pages/signal-forms/signal-forms';
 import { LifeCycle } from './pages/life-cycle/life-cycle';
 import { GetApi } from './pages/get-api/get-api';
+import { ServiceTest } from './pages/service-test/service-test';
+import { EmployeeCrud } from './pages/employee-crud/employee-crud';
 
 export const routes: Routes = [
   {
@@ -71,6 +73,14 @@ export const routes: Routes = [
   {
     path: 'get-api',
     component: GetApi,
+  },
+  {
+    path: 'service-test',
+    component: ServiceTest,
+  },
+  {
+    path: 'employee-crud',
+    component: EmployeeCrud,
   },
   {
     path: '**',
