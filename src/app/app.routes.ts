@@ -12,6 +12,7 @@ import { ReactiveForms } from './pages/reactive-forms/reactive-forms';
 import { Pipes } from './pages/pipes/pipes';
 import { SignalForms } from './pages/signal-forms/signal-forms';
 import { LifeCycle } from './pages/life-cycle/life-cycle';
+import { GetApi } from './pages/get-api/get-api';
 
 export const routes: Routes = [
   {
@@ -66,6 +67,10 @@ export const routes: Routes = [
   {
     path: 'pipes',
     component: Pipes,
+  },
+  {
+    path: 'get-api',
+    component: GetApi,
   },
   {
     path: '**',
