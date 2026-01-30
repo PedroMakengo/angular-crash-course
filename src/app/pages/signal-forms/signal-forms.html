@@ -1,0 +1,11 @@
+<div class="flex flex-col gap-2">
+  <input type="text" placeholder="Name" [formField]="empForm.name" class="border p-3 border-gray-200">
+  <input type="email" placeholder="E-mail" [formField]="empForm.email" class="border p-3 border-gray-200">
+
+  <div class="text-red-500">
+    @for(item of empForm.email().errors(); track $index){
+    <span>{{item.message}}</span>
+    }
+  </div>
+  {{empForm().value() | json }}
+</div>
