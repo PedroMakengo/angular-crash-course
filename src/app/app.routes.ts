@@ -11,6 +11,7 @@ import { TemplateForm } from './pages/template-form/template-form';
 import { ReactiveForms } from './pages/reactive-forms/reactive-forms';
 import { Pipes } from './pages/pipes/pipes';
 import { SignalForms } from './pages/signal-forms/signal-forms';
+import { LifeCycle } from './pages/life-cycle/life-cycle';
 
 export const routes: Routes = [
   {
@@ -57,6 +58,10 @@ export const routes: Routes = [
   {
     path: 'signal-forms',
     component: SignalForms,
+  },
+  {
+    path: 'life-cycle',
+    component: LifeCycle,
   },
   {
     path: 'pipes',
