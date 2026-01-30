@@ -1,0 +1,46 @@
+<div class="flex flex-col">
+  <form class="grid grid-col-12 gap-2" [formGroup]="empForm">
+    <div class="col-span-6 flex flex-col">
+      <label for="name">Name</label>
+      <input type="text" formControlName="name" placeholder="Enter name" class="border border-gray-200 py-2">
+      <div class="text-red-500">
+        @if(empForm.controls['name'].touched || empForm.controls['name'].dirty)
+        {
+        @if(empForm.controls['name'].errors?.['required']){
+        <span>This is required</span>
+        }
+        @if(empForm.controls['name'].errors?.['minlength']){
+        <span>Min 4 characters</span>
+        }
+        }
+      </div>
+    </div>
+    <div class="col-span-6 flex flex-col">
+      <label for="role">Role</label>
+      <select formControlName="role" class="border border-gray-200 py-2" id="departament">
+        <option selected>Select Role</option>
+        <option value="Developer">Developer</option>
+        <option value="Manager">Manager</option>
+      </select>
+    </div>
+    <div class="col-span-6 flex flex-col">
+      <label for="departament">Department</label>
+      <select formControlName="departament" class="border border-gray-200 py-2" id="departament">
+        <option selected>Select departament</option>
+        <option>HR</option>
+        <option>IT</option>
+        <option>Finance</option>
+        <option>Marketing</option>
+      </select>
+    </div>
+
+    <div class="col-span-6 flex flex-col">
+      <label for="salary">Salary</label>
+      <input formControlName="salary" type="text" placeholder="Enter salary" class="border border-gray-200 py-2">
+    </div>
+
+    <div>
+      <button type="submit" [disabled]="empForm.invalid" class="bg-blue-600 p-3 cursor-pointer">Save employee</button>
+    </div>
+  </form>
+</div>
