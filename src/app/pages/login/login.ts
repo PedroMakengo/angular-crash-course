@@ -15,7 +15,7 @@ export class Login {
   router = inject(Router);
 
   onLoginUser() {
-    if (this.userObj.email == 'john@gmail.com' && this.userObj.password == 'john123') {
+    if (this.userObj.email == 'devmakengo2021@gmail.com' && this.userObj.password == '123') {
       localStorage.setItem('email', this.userObj.email);
       this.router.navigateByUrl('employee-crud');
     } else {
