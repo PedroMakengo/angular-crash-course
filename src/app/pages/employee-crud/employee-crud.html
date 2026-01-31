@@ -2,7 +2,7 @@
   <div class="col-span-6">
     <div></div>
   </div>
-  <div class=" flex flex-col">
+  <div class="col-span-6 flex flex-col">
     <div class="grid grid-col-12">
       <div class="flex flex-col">
         <label for="id">ID</label>
@@ -17,8 +17,23 @@
       <div class="flex flex-col">
         <label for="department">Department</label>
         <select id="department" name="department" [(ngModel)]="empObje.department" class="border border-gray-200 p-3">
-          <option value=""></option>
+          <option value="" disabled selected>Selecione um departamento</option>
+          <option value="rh">Recursos Humanos</option>
+          <option value="financeiro">Financeiro</option>
+          <option value="administracao">Administração</option>
+          <option value="it">Tecnologia da Informação</option>
+          <option value="comercial">Comercial</option>
+          <option value="marketing">Marketing</option>
+          <option value="vendas">Vendas</option>
+          <option value="operacoes">Operações</option>
+          <option value="logistica">Logística</option>
+          <option value="juridico">Jurídico</option>
+          <option value="compras">Compras</option>
         </select>
+      </div>
+
+      <div>
+        <button class="cursor-pointer bg-blue-400 py-2 px-4 text-white rounded-md mt-2">Adicionar</button>
       </div>
 
       {{empObje | json}}
