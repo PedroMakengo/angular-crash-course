@@ -1,0 +1,133 @@
+<main class="bg-gray-100 min-h-screen flex">
+  <!-- Sidebar -->
+  <aside class="bg-white w-64 min-h-screen border-r border-gray-200 flex flex-col">
+    <!-- Logo/Brand -->
+    <div class="p-6 border-b border-gray-200">
+      <h2 class="text-xl font-bold text-gray-800">Angular Projeto</h2>
+      <p class="text-sm text-gray-500 mt-1">Dashboard</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="flex-1 p-4 overflow-y-auto">
+      <div class="space-y-1">
+        <a routerLink="employee-crud" routerLinkActive="bg-blue-50 text-blue-700 border-l-4 border-blue-700"
+          class="flex items-center gap-3 px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors border-l-4 border-transparent">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <span>Funcionário</span>
+        </a>
+
+        <!-- <a routerLink="service-test" routerLinkActive="bg-blue-50 text-blue-700 border-l-4 border-blue-700"
+          class="flex items-center gap-3 px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors border-l-4 border-transparent">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+          </svg>
+          <span>Serviços Test</span>
+        </a> -->
+
+        <!-- <a routerLink="get-api" routerLinkActive="bg-blue-50 text-blue-700 border-l-4 border-blue-700"
+          class="flex items-center gap-3 px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors border-l-4 border-transparent">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          <span>Consumir API</span>
+        </a> -->
+        <!-- 
+        <a routerLink="life-cycle" routerLinkActive="bg-blue-50 text-blue-700 border-l-4 border-blue-700"
+          class="flex items-center gap-3 px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors border-l-4 border-transparent">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+          <span>Life Cycle</span>
+        </a> -->
+
+        <!-- <a routerLink="template-form" routerLinkActive="bg-blue-50 text-blue-700 border-l-4 border-blue-700"
+          class="flex items-center gap-3 px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors border-l-4 border-transparent">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <span>Template Form</span>
+        </a> -->
+
+        <!-- <a routerLink="signals" routerLinkActive="bg-blue-50 text-blue-700 border-l-4 border-blue-700"
+          class="flex items-center gap-3 px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors border-l-4 border-transparent">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          <span>Signals</span>
+        </a> -->
+
+        <!-- <a routerLink="pipes" routerLinkActive="bg-blue-50 text-blue-700 border-l-4 border-blue-700"
+          class="flex items-center gap-3 px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors border-l-4 border-transparent">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+          </svg>
+          <span>Pipes</span>
+        </a> -->
+        <!-- 
+        <a routerLink="signal-forms" routerLinkActive="bg-blue-50 text-blue-700 border-l-4 border-blue-700"
+          class="flex items-center gap-3 px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors border-l-4 border-transparent">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+          </svg>
+          <span>Signal Forms</span>
+        </a> -->
+
+        <!-- <a routerLink="reactive-forms" routerLinkActive="bg-blue-50 text-blue-700 border-l-4 border-blue-700"
+          class="flex items-center gap-3 px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors border-l-4 border-transparent">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+          </svg>
+          <span>Reactive Forms</span>
+        </a> -->
+
+        <!-- <a routerLink="attribute-directive" routerLinkActive="bg-blue-50 text-blue-700 border-l-4 border-blue-700"
+          class="flex items-center gap-3 px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors border-l-4 border-transparent">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          </svg>
+          <span>Atribuito</span>
+        </a> -->
+
+        <!-- <a routerLink="control-flow" routerLinkActive="bg-blue-50 text-blue-700 border-l-4 border-blue-700"
+          class="flex items-center gap-3 px-4 py-3 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors border-l-4 border-transparent">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+          </svg>
+          <span>Controle de Flow</span>
+        </a> -->
+      </div>
+    </nav>
+
+    <!-- Footer -->
+    <div class="p-4 border-t border-gray-200">
+      <div class="flex items-center gap-3 px-4 py-2">
+        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold">
+          U
+        </div>
+        <div class="flex-1">
+          <p class="text-sm font-medium text-gray-800">User</p>
+          <p class="text-xs text-gray-500">user@example.com</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="flex-1 flex flex-col">
+    <section class="p-8 overflow-y-auto">
+      <router-outlet></router-outlet>
+    </section>
+  </div>
+</main>

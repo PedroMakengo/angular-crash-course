@@ -1,0 +1,18 @@
+<main class="h-screen flex items-center justify-center">
+  <div class="">
+    <form>
+      <div class="flex flex-col">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" [(ngModel)]="userObj.email" placeholder="Insira o seu e-mail">
+      </div>
+      <div class="flex flex-col">
+        <label for="password">E-mail</label>
+        <input type="password" name="password" [(ngModel)]="userObj.password" placeholder="Insira a sua senha">
+      </div>
+
+      <div>
+        <button (click)="onLoginUser()">Login</button>
+      </div>
+    </form>
+  </div>
+</main>

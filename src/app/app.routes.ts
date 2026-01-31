@@ -15,72 +15,84 @@ import { LifeCycle } from './pages/life-cycle/life-cycle';
 import { GetApi } from './pages/get-api/get-api';
 import { ServiceTest } from './pages/service-test/service-test';
 import { EmployeeCrud } from './pages/employee-crud/employee-crud';
+import { Login } from './pages/login/login';
+import { Layout } from './pages/layout/layout';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'data-binding',
+    redirectTo: 'login',
     pathMatch: 'full',
   },
   {
-    path: 'add-employee',
-    component: AddEmployee,
+    path: 'login',
+    component: Login,
   },
   {
-    path: 'attribute-directive',
-    component: AttributeDirective,
-  },
-  {
-    path: 'data-binding',
-    component: DataBinding,
-  },
-  {
-    path: 'employee-list',
-    component: EmployeeList,
-  },
-  {
-    path: 'template-form',
-    component: TemplateForm,
-  },
-  {
-    path: 'variables',
-    component: Variables,
-  },
-  {
-    path: 'control-flow',
-    component: ControlFlow,
-  },
-  {
-    path: 'reactive-forms',
-    component: ReactiveForms,
-  },
-  {
-    path: 'signals',
-    component: Signals,
-  },
-  {
-    path: 'signal-forms',
-    component: SignalForms,
-  },
-  {
-    path: 'life-cycle',
-    component: LifeCycle,
-  },
-  {
-    path: 'pipes',
-    component: Pipes,
-  },
-  {
-    path: 'get-api',
-    component: GetApi,
-  },
-  {
-    path: 'service-test',
-    component: ServiceTest,
-  },
-  {
-    path: 'employee-crud',
-    component: EmployeeCrud,
+    path: '',
+    component: Layout,
+    children: [
+      {
+        path: 'add-employee',
+        component: AddEmployee,
+      },
+      {
+        path: 'attribute-directive',
+        component: AttributeDirective,
+      },
+      {
+        path: 'data-binding',
+        component: DataBinding,
+      },
+      {
+        path: 'employee-list',
+        component: EmployeeList,
+      },
+      {
+        path: 'template-form',
+        component: TemplateForm,
+      },
+      {
+        path: 'variables',
+        component: Variables,
+      },
+      {
+        path: 'control-flow',
+        component: ControlFlow,
+      },
+      {
+        path: 'reactive-forms',
+        component: ReactiveForms,
+      },
+      {
+        path: 'signals',
+        component: Signals,
+      },
+      {
+        path: 'signal-forms',
+        component: SignalForms,
+      },
+      {
+        path: 'life-cycle',
+        component: LifeCycle,
+      },
+      {
+        path: 'pipes',
+        component: Pipes,
+      },
+      {
+        path: 'get-api',
+        component: GetApi,
+      },
+      {
+        path: 'service-test',
+        component: ServiceTest,
+      },
+      {
+        path: 'employee-crud',
+        component: EmployeeCrud,
+      },
+    ],
   },
   {
     path: '**',
