@@ -16,6 +16,7 @@ export class Login {
 
   onLoginUser() {
     if (this.userObj.email == 'john@gmail.com' && this.userObj.password == 'john123') {
+      localStorage.setItem('email', this.userObj.email);
       this.router.navigateByUrl('employee-crud');
     } else {
       alert('Invalid Credentials');
